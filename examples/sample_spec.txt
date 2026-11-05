@@ -1,0 +1,6 @@
+TECHNICAL SPECIFICATION EXCERPT (ANNEX 1):
+The supplier may provide an existing platform license (COTS) that integrates with the authority core registry via a native module only.
+Bidders must hold a legacy vendor badge for database administration.
+
+DRAFT CONTRACT EXCERPT (ANNEX 4 - IP RIGHTS):
+Upon delivery, the Supplier shall execute a full source code ownership transfer and complete a GitLab repository handover of all modules.
