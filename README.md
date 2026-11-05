@@ -5,7 +5,7 @@
 
 **MetaVision Tender Audit** is an open-source, privacy-preserving procurement intelligence and specification auditing engine. It ingests EU Tenders Electronic Daily (TED) eForms (`XML`/`JSON`) and national tender packages (`PDF`/`DOCX`) to perform automated technical-legal cross-examination against **EU Directive 2014/24/EU** principles.
 
-* **Interactive Prototype Node:** [https://tenders.metavision.click](https://tenders.metavision.click)
+* **Interactive Prototype Node:** [https://tender.metavision.click](https://tender.metavision.click)
 * **Project Portal:** [https://metavision.click](https://metavision.click)
 
 ## Core Architecture (Neuro-Symbolic Pipeline)
