@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "directive_reference": "2014/24/EU",
+  "rules": [
+    {
+      "rule_id": "EU-2014-24-ART42-LOCKIN-API",
+      "category": "Technical Neutrality / Vendor Lock-In",
+      "directive_article": "Article 42(4)",
+      "severity": "HIGH",
+      "description": "Detects requirement for proprietary integration modules or closed APIs without or equivalent functional specifications.",
+      "patterns": ["proprietary connector", "native module only", "specific vendor api without middleware"],
+      "remediation_template": "Pursuant to Article 42(4) of Directive 2014/24/EU, technical specifications shall not refer to a specific make or source unless accompanied by the words or equivalent. Please confirm that standard open REST API integrations meeting equivalent functional requirements are permissible."
+    },
+    {
+      "rule_id": "EU-2014-24-CROSS-COTS-SOURCE",
+      "category": "Cross-Document Legal-Technical Contradiction",
+      "directive_article": "Article 18(1) & Article 42",
+      "severity": "CRITICAL",
+      "description": "Flags structural contradiction where the Technical Specification allows COTS solutions, while the Draft Contract mandates full unencrypted source code transfer.",
+      "cross_check": {
+        "spec_indicators": ["cots", "standard commercial software", "existing platform license"],
+        "contract_indicators": ["full source code ownership", "exclusive intellectual property transfer", "gitlab repository handover"]
+      },
+      "remediation_template": "The Technical Specification permits pre-existing/COTS software modules, whereas the Draft Contract mandates unconditional transfer of full source code. Please clarify the IP clause so that pre-existing background IP is licensed appropriately, while source-code transfer applies strictly to bespoke custom-developed integration layers."
+    },
+    {
+      "rule_id": "EU-2014-24-ART58-DEPRECATED-CERT",
+      "category": "Disproportionate / Obsolete Qualification Gate",
+      "directive_article": "Article 58(1) & Article 42",
+      "severity": "HIGH",
+      "description": "Identifies mandatory specialist certifications that have been officially retired by the vendor.",
+      "patterns": ["retired certification", "legacy vendor badge"],
+      "remediation_template": "The qualification requirements reference a vendor certification that is deprecated or proprietary without an equivalent functional benchmark. In accordance with Article 58(1) of Directive 2014/24/EU, please confirm that current industry-standard equivalents will be accepted."
+    }
+  ]
+}
